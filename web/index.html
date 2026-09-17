@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="One-Bench behavioral anomaly benchmark report" />
+    <title>One-Bench Transaction Guard</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Signal Gate · Decision benchmark</p>
+          <h1>One-Bench Transaction Guard</h1>
+          <p class="lede">
+            Compare deterministic rules, TypeSafe Jev, and a general-purpose LLM on the same
+            synthetic transaction signals.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <span class="status-pill" id="status-pill" aria-live="polite">Running smoke test…</span>
+          <button id="refresh-button" type="button" disabled>Refresh view</button>
+        </div>
+      </header>
+
+      <section class="safety" aria-labelledby="safety-title">
+        <div class="shield" aria-hidden="true">SG</div>
+        <div>
+          <p class="eyebrow">Deterministic safety boundary</p>
+          <h2 id="safety-title">Models recommend. Policy controls.</h2>
+          <p>
+            A model-only HOLD becomes REVIEW and requires human approval. Only deterministic
+            sanctions or account-takeover thresholds can authorize an automatic hold.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="summary-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Live representative run</p>
+            <h2 id="summary-title">Engine summary</h2>
+          </div>
+          <p id="run-meta" class="meta">Preparing four labeled scenarios.</p>
+        </div>
+        <div id="engine-cards" class="engine-grid" aria-live="polite">
+          <article class="placeholder-card">Waiting for benchmark results…</article>
+        </div>
+      </section>
+
+      <section aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Decision quality and operations</p>
+            <h2 id="comparison-title">Comparison matrix</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Engine</th>
+                <th scope="col">Accuracy</th>
+                <th scope="col">False allow</th>
+                <th scope="col">False review</th>
+                <th scope="col">p50</th>
+                <th scope="col">p95</th>
+                <th scope="col">Consistency</th>
+                <th scope="col">Failures</th>
+              </tr>
+            </thead>
+            <tbody id="metrics-body">
+              <tr><td colspan="8">Benchmark is running…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="decisions-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Safety policy trace</p>
+            <h2 id="decisions-title">Representative decisions</h2>
+          </div>
+          <p class="meta">NORMAL · SUSPICIOUS · LEGITIMATE ANOMALY · ADVERSARIAL</p>
+        </div>
+        <div id="decision-list" class="decision-list">
+          <article class="placeholder-card">Decision traces will appear here.</article>
+        </div>
+      </section>
+
+      <footer>
+        Synthetic evaluation only. No real financial data. This report does not execute account
+        actions.
+      </footer>
+    </main>
+  </body>
+</html>

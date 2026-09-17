@@ -101,3 +101,7 @@ export const scenarios: TransactionScenario[] = (
 ).flatMap((category) =>
   Array.from({ length: 25 }, (_, index) => scenarioFor(category, index)),
 );
+
+export const smokeScenarios = [0, 25, 50, 75]
+  .map((index) => scenarios[index])
+  .filter((scenario) => scenario !== undefined);

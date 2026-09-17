@@ -55,6 +55,11 @@ The fast offline smoke benchmark is:
 pnpm bench:smoke
 ```
 
+To open the browser report locally, start `pnpm serve`. The page runs one representative smoke
+benchmark per server process, caches it, and shows engine metrics plus the deterministic policy
+result for each decision. Provider credentials stay on the server and are never sent to the
+browser.
+
 ## Configuration
 
 Copy `.env.example` only for local development. Do not commit `.env` files or credentials.

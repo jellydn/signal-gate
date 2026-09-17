@@ -6,6 +6,7 @@
   "scripts": {
     "bench": "tsx src/cli.ts",
     "bench:smoke": "tsx src/cli.ts --smoke --engines rules",
+    "serve": "tsx src/server.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
